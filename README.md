@@ -6,7 +6,7 @@ The AI Web Search Agent is a tool designed to automate data retrieval and extrac
 Given a dataset (in CSV or Google Sheets format), the AI agent reads specific entities in a chosen column, performs web searches for each, and uses a language model (LLM) to parse relevant information based on user-defined queries. The structured output can then be viewed in a simple dashboard interface and downloaded for further analysis and also added to the google sheet.
 
 ### ✨ [Demo](https://ai-web-search-agent.streamlit.app/)
-
+### [LOOM VIDEO](https://www.loom.com/share/e2323f940e264a439d1e278606412d5b?sid=7adca6cd-c32e-4fe3-bc16-9c18cc0fd911)
 ## Setup Guide
 
 ```sh
