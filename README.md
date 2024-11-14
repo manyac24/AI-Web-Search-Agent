@@ -24,11 +24,11 @@ Given a dataset (in CSV or Google Sheets format), the AI agent reads specific en
 ```sh
 1. Chose the file format you want to upload.
 2. If you are under CSV Tab- upload a csv file or If under Google sheet Tab- upload the sheet link.
-![image](images/1.png)
+![image1](/images/1.png)
 3. For uploading the google sheet link, authorize your google account by signing in
 .
 4. After uploading the file or sheet, you will see the data preview and data statistics.
-![image](images/2.png)
+![image2](images/2.png)
 
 5. Select the main column for which you want to query from droplist list of column names.
 6. For writing the template make sure you use the chose main column name in curly braces in the query.
