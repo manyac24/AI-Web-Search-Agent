@@ -1,14 +1,34 @@
 import streamlit as st
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
+import json
+import tempfile
 import pandas as pd
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-CREDENTIALS_FILE = 'client_Secret.json'
+# CREDENTIALS_FILE = 'client_Secret.json'
 
+google_oauth_secrets = st.secrets["google_oauth"]
+
+# Convert the credentials into the format needed for OAuth
+oauth_data = {
+    "web": {
+        "client_id": google_oauth_secrets["client_id"],
+        "project_id": google_oauth_secrets["project_id"],
+        "auth_uri": google_oauth_secrets["auth_uri"],
+        "token_uri": google_oauth_secrets["token_uri"],
+        "auth_provider_x509_cert_url": google_oauth_secrets["auth_provider_x509_cert_url"],
+        "client_secret": google_oauth_secrets["client_secret"],
+        "redirect_uris": [google_oauth_secrets["redirect_uri"]],
+    }
+}
+with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as tmp_file:
+    tmp_file.write(json.dumps(oauth_data).encode())
+    tmp_file_path = tmp_file.name
+    
 def create_oauth_flow():
     """Create OAuth2 flow instance to manage the OAuth 2.0 Authorization Grant Flow"""
     flow = Flow.from_client_secrets_file(
-        CREDENTIALS_FILE,
+        tmp_file_path,
         scopes=SCOPES,
         redirect_uri='http://localhost:8501'
     )
