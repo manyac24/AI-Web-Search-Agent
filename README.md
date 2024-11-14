@@ -24,9 +24,6 @@ Given a dataset (in CSV or Google Sheets format), the AI agent reads specific en
 ```sh
 1. Chose the file format you want to upload.
 2. If you are under CSV Tab- upload a csv file or If under Google sheet Tab- upload the sheet link.
-![1](https://github.com/user-attachments/assets/239e8cc9-ee35-4fb7-8e50-22e16c63f4a9)
-
-![image1](https://github.com/manyac24/AI-Web-Search-Agent/blob/main/images/1.png)
 3. For uploading the google sheet link, authorize your google account by signing in
 4. After uploading the file or sheet, you will see the data preview and data statistics.
 5. Select the main column for which you want to query from droplist list of column names.
