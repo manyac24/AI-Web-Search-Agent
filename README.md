@@ -6,13 +6,19 @@
 
 ### ✨ [Demo](https://ai-web-search-agent.streamlit.app/)
 
-## Install
+## Installation Guide
 
 ```sh
-n
+1. Clone the repository.
+2. Python version used is 3.11
+3. Run pip install requirements.txt
+4. Get your SERP API KEY AND GROQ API KEY and add them in config.json
+5. Create your OAuth 2.0 Client credentials and download them as client_secret.json file from google cloud console, alSo enable to Google Sheet API.
+6. Run the application by -> streamlit run app.py
+
 ```
 
-## Usage
+## Usage Guide
 
 ```sh
 n
