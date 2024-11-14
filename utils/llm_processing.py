@@ -7,9 +7,11 @@ import json
 from tenacity import retry, stop_after_attempt, wait_exponential
 from components.extraction_result import render_extraction_results
 
-with open("config.json") as f:
-    config = json.load(f)
-groq_api_key= config["GROQ_API_KEY"]
+# with open("config.json") as f:
+#     config = json.load(f)
+# groq_api_key= config["GROQ_API_KEY"]
+groq_api_key= st.secrets["GROQ_API_KEY"]
+
 
 def replace_with_entity(text):
     # Use regex to replace anything between curly braces with 'entity'
