@@ -29,9 +29,19 @@ Given a dataset (in CSV or Google Sheets format), the AI agent reads specific en
 5. Select the main column for which you want to query from droplist list of column names.
 6. For writing the template make sure you use the chose main column name in curly braces in the query.
 7. If the query entered is in correct format then valid template message is shown and query preview is shown.
-8. Execute web search and LLM processing by clicking on the "exectuer web search" button.
+8. Execute web search and LLM processing by clicking on the "exectue web search" button.
 9. The results show the desired information along with the confidence score, the web sources and brief notes.
 10. You can see the analysis tab and also download the data in csv file, or add data to google sheet- if input was google sheet.
 
+
+```
+
+## Additional features
+
+```sh
+1. Setting up database with name search_results.db using sqlite to cache the search results
+2. Provide users information about validation success and errors (if any) regarding failed API calls or LLM queries.
+3. Added google sheet output intergation by making a new sheet in the link
+4. We can ask for multiple info in the query template providing advanced query searches.
 
 ```
