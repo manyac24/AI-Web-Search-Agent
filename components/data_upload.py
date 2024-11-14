@@ -38,7 +38,9 @@ def render_upload_tabs():
         if st.session_state.get('credentials') is None:
             if st.button("Sign in with Google"):
                 flow = create_oauth_flow()
-                authorization_url, state = flow.authorization_url()
+                authorization_url, state = flow.authorization_url(access_type='offline',
+                   # Enable incremental authorization. Recommended as a best practice.
+                   include_granted_scopes='true')
                 st.markdown(f'Click [here]({authorization_url}) to authorize access')
                 st.session_state['oauth_state'] = state
                 
