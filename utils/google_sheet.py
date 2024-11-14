@@ -33,6 +33,10 @@ def create_oauth_flow():
         scopes=SCOPES,
         redirect_uri=google_oauth_secrets["redirect_uris"][1]
     )
+    flow.authorization_url(
+        access_type='offline',
+        include_granted_scopes='true'
+    )
     return flow
 
 def get_google_sheets_service(credentials):
