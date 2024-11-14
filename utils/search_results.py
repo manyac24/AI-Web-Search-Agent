@@ -10,9 +10,10 @@ from serpapi import GoogleSearch
 from utils.llm_processing import render_extraction_by_LLM
 
 
-with open("config.json") as f:
-    config = json.load(f)
-SERPAPI_KEY = config["SERPAPI_KEY"]
+# with open("config.json") as f:
+#     config = json.load(f)
+# SERPAPI_KEY = config["SERPAPI_KEY"]
+SERPAPI_KEY=st.secrets["SERPAPI_KEY"]
 
 class SearchResultsManager:
     def __init__(self, db_path="search_results.db"):
