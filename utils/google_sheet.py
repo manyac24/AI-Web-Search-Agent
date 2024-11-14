@@ -18,7 +18,7 @@ oauth_data = {
         "token_uri": google_oauth_secrets["token_uri"],
         "auth_provider_x509_cert_url": google_oauth_secrets["auth_provider_x509_cert_url"],
         "client_secret": google_oauth_secrets["client_secret"],
-        "redirect_uris": [google_oauth_secrets["redirect_uri"]],
+        "redirect_uris": json.loads(google_oauth_secrets["redirect_uris"]),
     }
 }
 with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as tmp_file:
@@ -30,7 +30,7 @@ def create_oauth_flow():
     flow = Flow.from_client_secrets_file(
         tmp_file_path,
         scopes=SCOPES,
-        redirect_uri='http://localhost:8501'
+        redirect_uri=google_oauth_secrets["redirect_uris"][1]
     )
     return flow
 
