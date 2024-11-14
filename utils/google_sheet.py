@@ -31,11 +31,7 @@ def create_oauth_flow():
     flow = Flow.from_client_secrets_file(
         tmp_file_path,
         scopes=SCOPES,
-        redirect_uri=google_oauth_secrets["redirect_uris"][1]
-    )
-    flow.authorization_url(
-        access_type='offline',
-        include_granted_scopes='true'
+        redirect_uri='https://ai-web-search-agent.streamlit.app'
     )
     return flow
 
