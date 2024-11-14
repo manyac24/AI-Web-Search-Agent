@@ -24,19 +24,19 @@ Given a dataset (in CSV or Google Sheets format), the AI agent reads specific en
 ```sh
 1. Chose the file format you want to upload.
 2. If you are under CSV Tab- upload a csv file or If under Google sheet Tab- upload the sheet link.
-![image](https://github.com/user-attachments/assets/1bd5701e-501d-412e-b894-1f16efed344f)
+![image](images/1.png)
 3. For uploading the google sheet link, authorize your google account by signing in
 .
 4. After uploading the file or sheet, you will see the data preview and data statistics.
-![image](https://github.com/user-attachments/assets/d37fe79e-85ea-4988-bc5b-bf560c8da9f8)
+![image](images/2.png)
 
 5. Select the main column for which you want to query from droplist list of column names.
 6. For writing the template make sure you use the chose main column name in curly braces in the query.
-![image](https://github.com/user-attachments/assets/de5d6516-4f00-45b5-8e00-d4184efe1b8c)
+![image](images/3.png)
 
 7. If the query entered is in correct format then valid template message is shown and query preview is shown.
 8. Execute web search and LLM processing by clicking on the "exectuer web search" button.
-![image](https://github.com/user-attachments/assets/3f25dd9b-bf5a-43f7-8135-b918307a8f3d)
+![image](images/Screenshot 2024-11-14 181539.png)
 9. The results show the desired information along with the confidence score, the web sources and brief notes.
 10. You can see the analysis tab and also download the data in csv file, or add data to google sheet- if input was google sheet.
 
