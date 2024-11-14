@@ -18,6 +18,7 @@ oauth_data = {
         "token_uri": google_oauth_secrets["token_uri"],
         "auth_provider_x509_cert_url": google_oauth_secrets["auth_provider_x509_cert_url"],
         "client_secret": google_oauth_secrets["client_secret"],
+        "javascript_origins": google_oauth_secrets["javascript_origins"],
         "redirect_uris": json.loads(google_oauth_secrets["redirect_uris"]),
     }
 }
